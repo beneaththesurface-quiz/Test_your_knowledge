@@ -244,6 +244,7 @@
   correctSound.volume = 0.15;
   wrongSound.volume = 0.15;
 
+
   const questions = [
     {
       question: "You catch yourself zoning out and feeling like you’re outside your body sometimes. What disorder could this point to?",
@@ -257,27 +258,37 @@
       feedback: "This disorder causes feelings of detachment from reality or self."
     },
     {
-      question: "“Regular exercise can help improve mental health symptoms.”",
-      options: ["True", "False"],
-      answer: "True",
-      feedback: "Exercise boosts mood by releasing endorphins and reducing stress."
-    },
-    {
-      question: "Which disorder involves mood episodes combined with psychotic symptoms, and is classified separately from schizophrenia and bipolar in DSM-5?",
+      question: " Factitious Disorder Imposed on Self involves deceptive behavior. What’s a key reason someone may develop this condition?",
       options: [
-        "Schizoaffective Disorder",
-        "Cyclothymic Disorder",
-        "Major Depressive Disorder",
-        "Generalized Anxiety Disorder"
+        "History of substance abuse",
+        "Need for medication access",
+        "Desire to escape legal consequences",
+        "Deep craving for medical attention or sympathy"
       ],
-      answer: "Schizoaffective Disorder",
-      feedback: "It features both mood and psychotic symptoms."
+      answer: "Deep craving for medical attention or sympathy",
+      feedback:"Individuals with this disorder deliberately fake or exaggerate medical symptoms for emotional gratification — often to assume a 'sick role' and gain sympathy or attention, not for material gain." 
     },
     {
-      question: "“Medications for mental illness always cause addiction or dependency.”",
-      options: ["True", "False"],
-      answer: "False",
-      feedback: "Most psychiatric medications are non-addictive and prescribed carefully."
+      question: "Your friend insists they are extremely ill, despite multiple medical tests showing nothing. They seem genuinely distressed. What might this indicate?",
+      options: [
+        "Munchausen Syndrome",
+        "Somatic Symptom Disorder",
+        "Health Anxiety",
+        "Conversion Disorder"
+      ],
+      answer: "Somatic Symptom Disorder",
+      feedback: "Unlike Munchausen (where symptoms are faked), SSD involves real distress and perceived physical symptoms, despite no identifiable cause. The pain is experienced genuinely, and it’s not “just in their head” — the brain interprets discomfort as illness."
+    },
+    {
+      question: "What defines Apotemnophilia (Body Integrity Identity Disorder), a disorder that challenges traditional views of the body?",
+      options: [
+        "Desire to look like someone else",
+        "Belief that a healthy limb doesn’t belong to their body",
+        "Acute fear of musculoskeletal injury",
+        "Obsession with body-checking and mirrors"
+      ],
+      answer: "Belief that a healthy limb doesn’t belong to their body",
+      feedback: "BIID (or Apotemnophilia) is marked by the intense and persistent desire to amputate a healthy limb. Sufferers may feel that the limb doesn’t belong to them, leading to risky behavior or self-harm if untreated."
     },
     {
       question: "Which condition in DSM-5 requires symptoms lasting at least two weeks including depressed mood or loss of interest, plus other criteria?",
@@ -302,10 +313,15 @@
       feedback: "Panic disorder is characterized by unexpected panic attacks."
     },
     {
-      question: "“Early intervention can significantly improve outcomes for people with mental illness.”",
-      options: ["True", "False"],
-      answer: "True",
-      feedback: "Timely support often leads to better recovery."
+      question: "Which unique symptom makes Pseudocyesis different from other somatic disorders?",
+      options: [
+        "Fear of fertility loss",
+        "Belief in another person’s pregnancy",
+        "Displaying physical signs of pregnancy without being pregnant",
+        "Hallucinating the sound of a baby"
+      ],
+      answer: "Displaying physical signs of pregnancy without being pregnant",
+      feedback: "Pseudocyesis, or false pregnancy, causes someone to believe they’re pregnant and even develop physical symptoms like missed periods, weight gain, and abdominal enlargement — despite having no fetus present."
     },
     {
       question: "Which of these is a symptom of Obsessive-Compulsive Disorder (OCD)?",
@@ -330,32 +346,37 @@
       feedback: "GAD features persistent anxiety and excessive worry."
     },
     {
-      question: "“Stress always causes mental illness.”",
-      options: ["True", "False"],
-      answer: "False",
-      feedback: "Stress can trigger but doesn’t guarantee mental illness."
+      question: "Diogenes Syndrome is often misunderstood. Which behavior is most characteristic of this condition?",
+      options: [
+        "Obsessive cleaning and organizing",
+        "Emotional withdrawal from family and friends",
+        "Severe self-neglect and compulsive hoarding",
+        "Sudden bursts of extreme risk-taking"
+      ],
+      answer: "Severe self-neglect and compulsive hoarding",
+      feedback: "Diogenes Syndrome involves extreme neglect of hygiene, surroundings, and self-care — often accompanied by hoarding behavior. It typically affects elderly individuals and is linked to social isolation and possible dementia."
     },
     {
-      question: "Which of these is NOT a typical symptom of social anxiety?",
+      question: " You notice your friend often mimics your mannerisms, adopts your opinions quickly, and seems to lose their own sense of self in every new relationship. Which disorder might this behavior align with?",
       options: [
-        "Fear of being judged",
-        "Avoidance of social situations",
-        "Hearing voices",
-        "Physical symptoms like sweating or shaking"
+        "Borderline Personality Disorder",
+        "Dependent Personality Disorder",
+        "Dissociative Identity Disorder",
+        "Schizotypal Personality Disorder"
       ],
-      answer: "Hearing voices",
-      feedback: "Auditory hallucinations are not typical of social anxiety."
+      answer: "Dependent Personality Disorder",
+      feedback: "DPD isn’t just about being clingy — it can involve subtle loss of autonomy, where a person molds their identity around others to avoid abandonment. It’s commonly mistaken for BPD, but BPD usually has more emotional volatility and unstable self-image rather than complete submission to others' identities."
     },
     {
-      question: "Which disorder is characterized by dissociative identity and memory gaps?",
+      question: "Which of the following statements about mental health language is most likely to cause harm, despite sounding casual or joking?",
       options: [
-        "Dissociative Identity Disorder (DID)",
-        "Schizophrenia",
-        "Anxiety Disorder",
-        "Depression"
+        "“I need everything organized, I’m so OCD.”",
+        "“I get anxious before exams, who doesn’t?”",
+        "“Mental illness is tough, but people can recover.”",
+        "“He always has mood swings — maybe he’s just tired.”"
       ],
-      answer: "Dissociative Identity Disorder (DID)",
-      feedback: "DID involves multiple distinct identities and memory loss."
+      answer: "“I need everything organized, I’m so OCD.”",
+      feedback: "This phrase trivializes Obsessive Compulsive Disorder, reducing it to a personality quirk. OCD is a serious, often debilitating condition involving intrusive thoughts and compulsions — not just liking things neat. Casual misuse of clinical terms feeds stigma by making them sound like jokes or exaggerations."
     },
     {
       question: "Which of the following is true regarding ICD-11?",
@@ -369,32 +390,37 @@
       feedback: "ICD-11 is an international diagnostic tool for many diseases."
     },
     {
-      question: "Which of these is a key symptom of Body Dysmorphic Disorder?",
+      question: "Which pattern most strongly indicates Persistent Complex Bereavement Disorder (PCBD)?",
       options: [
-        "Obsession with perceived flaws in appearance",
-        "Extreme mood swings",
-        "Hallucinations",
-        "Avoidance of social situations"
+        "Grief episodes triggered by anniversaries or major life changes",
+        "Emotional detachment accompanied by general apathy for months",
+        "Persistent yearning and avoidance behaviors extending beyond a year",
+        "Recurring depressive symptoms with no identifiable external cause"
       ],
-      answer: "Obsession with perceived flaws in appearance",
-      feedback: "BDD involves intense focus on imagined physical defects."
+      answer: "Persistent yearning and avoidance behaviors extending beyond a year",
+      feedback: "PCBD is marked by prolonged, intense grief that includes persistent yearning and active avoidance of reminders lasting more than 12 months. Unlike typical grief, it severely impacts functioning."
     },
     {
-      question: "“Only adults can develop serious mental illnesses.”",
-      options: ["True", "False"],
-      answer: "False",
-      feedback: "Mental illnesses can develop at any age, including childhood."
+      question: "What makes Shared Psychotic Disorder especially unique among delusional disorders?",
+      options: [
+        "It arises in those with pre-existing psychosis who isolate together",
+        "Delusions are mirrored by another person through close association",
+        "Both individuals independently develop identical delusions",
+        "It’s triggered by collective trauma or cultural paranoia"
+      ],
+      answer: "Delusions are mirrored by another person through close association",
+      feedback: "Shared Psychotic Disorder(Folie à Deux) involves one individual 'transmitting' their delusions to another, usually in a close, dependent relationship. It’s rare and hard to diagnose, and often resolves when the pair is separated."
     },
     {
-      question: "Which bipolar disorder variant is characterized by fluctuating mood symptoms that don’t meet full criteria for hypomania or major depression?",
+      question: "You notice someone is extremely sensitive to sounds, lights, and textures. They become overwhelmed easily and often withdraw. Which condition might this reflect?",
       options: [
-        "Cyclothymic Disorder",
-        "Bipolar I",
-        "Major Depressive Disorder",
-        "Panic Disorder"
+        "Autism Spectrum Disorder",
+        "Sensory Processing Disorder",
+        "PTSD",
+        "Obsessive Compulsive Disorder"
       ],
-      answer: "Cyclothymic Disorder",
-      feedback: "Cyclothymia causes mild but persistent mood swings."
+      answer: "Sensory Processing Disorder",
+      feedback: " SPD isn’t officially recognized in the DSM-5 as a standalone diagnosis, but it’s a very real condition where the brain has trouble organizing sensory information. It overlaps with ASD but can exist alone and be mistaken for anxiety or “overreacting.”"
     },
     {
       question: "Someone fears abandonment and has unstable, intense relationships. Which disorder does this describe?",
@@ -419,21 +445,26 @@
       feedback: "Schizoaffective disorder combines mood and psychosis symptoms."
     },
     {
-      question: "“Support from family and community can improve recovery from mental illness.”",
-      options: ["True", "False"],
-      answer: "True",
-      feedback: "Social support is crucial for healing and wellbeing."
+      question: "Which of the following is a subtle but common example of gaslighting someone with mental health struggles?",
+      options: [
+        "“Are you sure you’re not just overthinking it?”",
+        "“You should try yoga, it worked for me.”",
+        "“You always seem fine to me — maybe you're being too sensitive?”",
+        "“Everyone gets down sometimes — it's probably just a rough patch.”"
+      ],
+      answer: "“Are you sure you’re not just overthinking it?”",
+      feedback: "This phrase plants doubt in the person's mind about their own thoughts and emotions, making them question their reality — classic gaslighting."
     },
     {
-      question: "Which of these statements is true?",
+      question: "Your coworker seems unusually enthusiastic and energetic. But the next week, they appear exhausted, withdrawn, and pessimistic. Over time, this cycle repeats every few months. What’s the most precise possibility?",
       options: [
-        "Seeking help for mental health is a sign of strength",
-        "Mental illness only happens to weak people",
-        "Mental health conditions always cause violence",
-        "You can diagnose yourself accurately online"
+        "Bipolar I Disorder",
+        "Cyclothymia",
+        "Major Depressive Disorder",
+        "Persistent Depressive Disorder"
       ],
-      answer: "Seeking help for mental health is a sign of strength",
-      feedback: "Asking for help is a brave and positive step."
+      answer: "Cyclothymia",
+      feedback: "Cyclothymia involves mood swings that are less intense than Bipolar I but still disrupt life. People often dismiss it as just moodiness, but it is a chronic condition and harder to spot because of its subtlety — and it often goes undiagnosed."
     }
   ];
 
