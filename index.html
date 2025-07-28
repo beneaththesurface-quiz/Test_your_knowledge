@@ -584,19 +584,55 @@
     const blueHeart = '💙';
     const finalScorePercent = Math.round((score / questions.length) * 100);
 
-    finalFeedback.innerHTML = `
-      <h2>Well done, ${userName}!</h2>
-      <p>You scored ${score} out of ${questions.length} (${finalScorePercent}%). ${blueHeart}</p>
-      <p>This quiz was designed to help raise awareness about mental health conditions and challenge stigma.</p>
-      <p>Remember, understanding and kindness make a big difference in supporting mental wellbeing.</p>
-      <p>If you want to learn more or help others, keep exploring resources and talking openly!</p>
-    `;
-    finalFeedback.style.display = 'block';
+   let message = '';
 
-    if (score >= 15) {
-      launchConfetti();
+    if (score <= 5) {
+      message = `
+        <h2>You're Just Getting Started, ${userName}</h2>
+        <p>You scored ${score} out of ${questions.length} (${finalScorePercent}%).</p>
+        <p>And that’s perfectly okay — the goal of this quiz isn’t to judge you. It’s to spark curiosity, raise awareness, and encourage growth. Mental health is a vast and evolving topic, and the fact that you took this step shows courage and openness.</p>
+        <p>Remember: every expert was once a beginner. You’re learning, and learning takes time. Keep exploring, keep asking questions, and keep showing up — because that’s how awareness begins.</p>
+        <p>We're proud of you for trying. Keep going. You're already making a difference. ${blueHeart}</p>
+      `;
+    } else if (score <= 10) {
+      message = `
+        <h2>You're On Your Way, ${userName}!</h2>
+        <p>You scored ${score} out of ${questions.length} (${finalScorePercent}%).</p>
+        <p>This means you have a growing awareness of mental health topics — and that’s something to celebrate. You're not just guessing — you're absorbing, reflecting, and learning.</p>
+        <p>There’s still a lot to uncover, and that’s what makes this journey so powerful. Every new fact, every myth busted, every moment of empathy — it adds up.</p>
+        <p>Keep asking, keep learning, and don’t stop now. You’re building a foundation that can help not just you, but others around you. 💪</p>
+      `;
+    } else if (score < 15) {
+      message = `
+        <h2>Impressive Progress, ${userName}</h2>
+        <p>You scored ${score} out of ${questions.length} (${finalScorePercent}%).</p>
+        <p>You clearly have a solid understanding of mental health conditions and are well on your way to becoming an advocate for awareness and understanding.</p>
+        <p>There’s always more to learn — even professionals continue growing in this space — but you’re already breaking down stigma with your awareness and compassion.</p>
+        <p>Use your knowledge to support yourself and others, challenge misinformation, and keep mental health a part of everyday conversation.</p>
+      `;
+    } else {
+      message = `
+        <h2>Incredible Work, ${userName}! 🌟</h2>
+        <p>You scored ${score} out of ${questions.length} (${finalScorePercent}%).</p>
+        <p>Your deep awareness of mental health issues is inspiring. You’ve shown not only knowledge, but a real commitment to understanding the complexities behind mental health struggles.</p>
+        <p>This quiz wasn’t easy — and your results suggest you’re already challenging stigma, supporting others, and staying informed. Keep using your voice and insight to build a more compassionate world.</p>
+        <p>The more we learn, the more we care — and the more change we create. Thank you for being part of that change. ${blueHeart}</p>
+      `;
+
+      if (score >= 15) {
+        launchConfetti();
+      }
     }
-  }
+
+    message += `
+      <div style="margin-top: 25px; font-weight: bold;">
+        Want to learn more? <a href="#resources" style="color: #667eea;">Check out our resources</a> below to keep growing.
+      </div>
+    `;
+
+    finalFeedback.innerHTML = message;
+    finalFeedback.style.display = 'block';
+ }
 
   function playSound(sound) {
     sound.currentTime = 0;
